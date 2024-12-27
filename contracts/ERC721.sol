@@ -4,14 +4,14 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract MeowjestyNFT is ERC721URIStorage {
+contract LakhNFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
     
     address public owner;
 
-    constructor() ERC721("MeowjestyNFT", "MJ") {
-        owner = msg.sender;
+    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
+        owner = msg.sender; 
     }
 
     function mintNFT(string memory tokenURI) public returns (uint256) {

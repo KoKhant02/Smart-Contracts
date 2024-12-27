@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract VariantAssets is ERC1155URIStorage, Ownable {
+contract VariantERC1155 is ERC1155URIStorage, Ownable {
 
     string public name;
     string public symbol;
