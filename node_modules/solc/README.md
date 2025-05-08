@@ -152,7 +152,7 @@ return either an error or the result from the solver.  A default
 ``smtchecker.js`` which exports the ``smtCallback`` function that takes 1) a
 function that takes queries and returns the solving result, and 2) a solver
 configuration object. The module ``smtsolver.js`` has a few predefined solver
-configurations, and relies on Z3, Eldarica or CVC4 being installed locally.  It
+configurations, and relies on Z3, Eldarica or cvc5 being installed locally.  It
 exports the list of locally found solvers and a function that invokes a given
 solver.
 
@@ -319,7 +319,7 @@ var output = translate.prettyPrintLegacyAssemblyJSON(assemblyJSON, sourceCode)
 ## Browser Usage
 
 Compilation is generally a long-running and resource intensive task that cannot reasonably be performed in the main thread of the browser.
-Some browsers even dissallow synchronous compilation on the main thread if the module is larger than 4KB.
+Some browsers even disallow synchronous compilation on the main thread if the module is larger than 4KB.
 Thus, the only supported way to use `solc` in a web browser is through a [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers).
 
 ### Loading solc with web workers
