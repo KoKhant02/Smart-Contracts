@@ -13,7 +13,7 @@ const contracts = ["ERC20.sol", "ERC721.sol", "ERC1155.sol"];
 
 contracts.forEach((contractFile) => {
   const filePath = path.resolve(contractsDir, contractFile);
-  const baseName = path.parse(contractFile).name; // Extract "ERC20" from "ERC20.sol"
+  const baseName = path.parse(contractFile).name; 
 
   if (!fs.existsSync(filePath)) {
     console.log(`Error: Contract file ${contractFile} not found!`);
