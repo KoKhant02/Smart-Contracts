@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
@@ -7,10 +7,8 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 contract CoraERC20 is ERC20Pausable, Ownable {
 
-    uint256 private _initialSupply = 1_000_000 * 10 ** 18;
-
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) Ownable(msg.sender){
-        _mint(msg.sender, _initialSupply); 
+    constructor(string memory name, string memory symbol, uint256 initialSupply) ERC20(name, symbol) Ownable(msg.sender){
+        _mint(msg.sender, initialSupply); 
     }
 
     /**
